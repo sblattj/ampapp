@@ -1,14 +1,12 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "ampapp3c6199a8_identitypool_3c6199a8",
-    "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "ampapp3c6199a8",
-    "userPoolName": "ampapp3c6199a8_userpool_3c6199a8",
+    "resourceNameTruncated": "ampappd2381a7d",
+    "userPoolName": "ampapp_userpool",
     "autoVerifiedAttributes": [
-      "email"
+      "phone_number"
     ],
-    "mfaConfiguration": "OFF",
+    "mfaConfiguration": "ON",
     "mfaTypes": [
       "SMS Text Message"
     ],
@@ -16,11 +14,11 @@
     "smsVerificationMessage": "Your verification code is {####}",
     "emailVerificationSubject": "Your verification code",
     "emailVerificationMessage": "Your verification code is {####}",
-    "defaultPasswordPolicy": false,
-    "passwordPolicyMinLength": 8,
+    "defaultPasswordPolicy": true,
+    "passwordPolicyMinLength": "8",
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-      "email"
+      "phone_number"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
@@ -31,16 +29,23 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "ampapp3c6199a8_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "ampappd2381a7d_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "3c6199a8",
-    "resourceName": "ampapp3c6199a8",
-    "authSelections": "identityPoolAndUserPool",
-    "useDefault": "default",
+    "sharedId": "d2381a7d",
+    "resourceName": "ampappauth",
+    "authSelections": "userPoolOnly",
+    "useDefault": "manual",
     "usernameAttributes": [
       "phone_number"
     ],
-    "userPoolGroupList": [],
+    "userPoolGroups": true,
+    "adminQueries": true,
+    "triggers": {},
+    "hostedUI": false,
+    "userPoolGroupList": [
+      "admin"
+    ],
+    "adminQueryGroup": "admin",
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
     "useEnabledMfas": true
